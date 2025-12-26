@@ -1,0 +1,17 @@
+def minion_game(String):
+ k=0
+ s=0
+ v="AEIOU"
+ for i in range(len(String)):
+    if String[i] in v:
+        k+=len(String)-i
+    else:
+        s+=len(String)-i
+ if k>s:
+    print("Kelvin",k)
+ elif s>k:
+    print("Staurt",s)
+ else:
+    print("Draw")
+String=str(input())
+print(minion_game(String))
